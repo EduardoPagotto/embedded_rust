@@ -1,3 +1,4 @@
 [workspace]
 
 members = ["kernel", "rtos"]
+resolver = "2"

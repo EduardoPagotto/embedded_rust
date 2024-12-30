@@ -1,13 +1,13 @@
 # Rust Embedded RISCV32IAMC
 
-O que é Embedded rust
 
 - Projetos sem standard #![no_std] library (libstd)
 - Usa o libcore
 - libcore é leve sem dependencias com o Sistema Operacional
+- Processadores RISCV
 
 ## Instalação
-Tools
+Tools:
 ```bash
 # instalaão de app de dev
 cargo search cargo-objdump
@@ -15,7 +15,17 @@ cargo install cargo-binutils
 rustup component add llvm-toolscargo
 ```
 
-Target Arch
+Opcional em Fedora 41, instalação LLVM
+```bash
+# LLVM / LLDM /CMAKE
+sudo dnf install clang clang-tools-extra
+sudo dnf install cmake cmake-data cmake-rpm-macros jsoncpp libstdc++-static llvm-static llvm-devel llvm-test autoconf automake
+sudo dnf install lldb lldb-devel
+sudo dnf install compiler-rt
+```
+
+
+Target Arch:
 ```bash
 # Exibe target disponiveis
 rustc --print target-list
@@ -24,7 +34,7 @@ rustc --print target-list
 rustup target add riscv32imac-unknown-none-elf
 ```
 
-## Worksapce
+## Workspace
 ```bash
 # Cria diretorio de worksapce
 mkdir wsbootstrap
@@ -68,12 +78,13 @@ Teste do binario mostra assembler RISCV32
 ```bash
 
 # Com o LLVM
-# llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/librtos.rlib
 
-rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/
+# llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/kernel
+rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/kernel
+
+# llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/librtos.rlib
 rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/librtos.rlib
 ```
-
 
 refs:
 - https://doc.rust-lang.org/core/
