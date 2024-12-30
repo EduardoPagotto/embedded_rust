@@ -1,6 +1,5 @@
 # Rust Embedded RISCV32IAMC
 
-
 - Projetos sem standard #![no_std] library (libstd)
 - Usa o libcore
 - libcore é leve sem dependencias com o Sistema Operacional
@@ -23,7 +22,6 @@ sudo dnf install cmake cmake-data cmake-rpm-macros jsoncpp libstdc++-static llvm
 sudo dnf install lldb lldb-devel
 sudo dnf install compiler-rt
 ```
-
 
 Target Arch:
 ```bash
@@ -57,10 +55,10 @@ rust-size target/debug/kernel
 cargo clean
 ```
 
-## Setup do ./cargo/config
+## Setup do ./cargo/config.toml
 ```bash
 mkdir .cargo
-touch .cargo/config
+touch .cargo/config.toml
 ```
 
 .cargo/config

@@ -6,5 +6,8 @@ edition = "2021"
 [lib]
 name = "rtos"
 path = "src/lib.rs"
+test = false
+doctest = false
+bench = false
 
 [dependencies]
