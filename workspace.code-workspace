@@ -65,6 +65,11 @@
 			"error",
 			"warning"
 		],
+		// lldb
+		"lldb.showDisassembly": "auto",
+		"lldb.dereferencePointers": true,
+		"lldb.consoleMode": "commands",
+		"lldb-dap.executable-path": "/usr/bin/lldb-dap",
 		// Rust
 		"[rust]": {
 			"editor.defaultFormatter": "rust-lang.rust-analyzer"
