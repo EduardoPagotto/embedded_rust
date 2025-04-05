@@ -5,7 +5,7 @@
 - libcore é leve sem dependencias com o Sistema Operacional
 - Processadores RISCV
 
-## Instalação
+## Se nova instalação
 Tools:
 ```bash
 # instalaão de app de dev
@@ -21,6 +21,12 @@ sudo dnf install clang clang-tools-extra
 sudo dnf install cmake cmake-data cmake-rpm-macros jsoncpp libstdc++-static llvm-static llvm-devel llvm-test autoconf automake
 sudo dnf install lldb lldb-devel
 sudo dnf install compiler-rt
+```
+
+## Se necessario atualizar o rust
+```bash
+rustc --version
+rustup update stable
 ```
 
 Target Arch:
@@ -61,8 +67,8 @@ mkdir .cargo
 touch .cargo/config.toml
 ```
 
-.cargo/config
-```file
+.cargo/config.toml
+```toml
 [build]
 target = "riscv32imac-unknown-none-elf"
 rustflags = [
