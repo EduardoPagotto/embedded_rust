@@ -12,4 +12,4 @@ bench = false
 
 
 [dependencies]
-rtos = { path = "../rtos" }
+drivers = { path = "../drivers" }

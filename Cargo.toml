@@ -1,4 +1,4 @@
 [workspace]
 
-members = ["kernel", "rtos"]
-resolver = "2"
+members = ["drivers", "kernel"]
+resolver = "1"

@@ -4,7 +4,7 @@
 
 use core::arch::global_asm;
 use core::panic::PanicInfo;
-use rtos::uart;
+use drivers::uart;
 
 global_asm!(include_str!("boot.S"));
 // mesmo que a linha de cima mas com escobo local

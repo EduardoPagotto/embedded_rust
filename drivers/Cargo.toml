@@ -1,10 +1,10 @@
 [package]
-name = "rtos"
+name = "drivers"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [lib]
-name = "rtos"
+name = "drivers"
 path = "src/lib.rs"
 test = false
 doctest = false
