@@ -16,7 +16,7 @@ ENTRY(start) # alterado
 
 /* Memory Layout */
 
-/*Flash memory on E31 range 0x2000_0000 - 0x3FFF_FFFF, LENGHT = 0x20000000 
+/*Flash memory on E31 range 0x2000_0000 - 0x3FFF_FFFF, LENGHT = 0x20000000
 - 512MB max support for off-chip flash */
 
 MEMORY
@@ -27,13 +27,13 @@ MEMORY
 
 /* SECTIONS Commmand
 SECTIONS { ...
-  secname : {  
+  secname : {
     contents
   }
 ... }
-In above, secname is the output section name, content is the 
-content that goes into the section. The output section 
-would be created only if there is any content. 
+In above, secname is the output section name, content is the
+content that goes into the section. The output section
+would be created only if there is any content.
 
 SECTIONS
 {

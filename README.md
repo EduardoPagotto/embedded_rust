@@ -12,6 +12,7 @@ Tools:
 cargo search cargo-objdump
 cargo install cargo-binutils
 rustup component add llvm-toolscargo
+rustup component add llvm-tools-preview
 ```
 
 Opcional em Fedora 41, instalação LLVM
@@ -73,7 +74,7 @@ touch .cargo/config.toml
 target = "riscv32imac-unknown-none-elf"
 rustflags = [
     "-C", "link-dead-code",
-    "-C", "link-args=-Thifive1-revb-rom.lscript"
+    "-C", "link-args=-Thifive1-revb-rom.ld"
 ]
 
 ```
@@ -82,12 +83,11 @@ Teste do binario mostra assembler RISCV32
 ```bash
 
 # Com o LLVM
+llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/kernel
+# rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/kernel
 
-# llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/kernel
-rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/kernel
-
-# llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/librtos.rlib
-rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/librtos.rlib
+llvm-objdump --arch-name=riscv32 -dC target/riscv32imac-unknown-none-elf/debug/libdrivers.rlib
+# rust-objdump  -dC target/riscv32imac-unknown-none-elf/debug/libdrivers.rlib
 ```
 
 refs:
