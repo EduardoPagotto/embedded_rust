@@ -15,7 +15,7 @@ rustup component add llvm-toolscargo
 rustup component add llvm-tools-preview
 ```
 
-Opcional em Fedora 41, instalação LLVM
+Se Fedora 42, instalação LLVM e tools
 ```bash
 # LLVM / LLDM /CMAKE
 sudo dnf install clang clang-tools-extra
